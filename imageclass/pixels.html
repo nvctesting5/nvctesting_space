@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Pixel Images</title>
+</head>
+<body>
+  <h1>Pixel Images (1×1 / 0×0)</h1>
+
+  <p>These are data-URI pixels with explicit width/height attributes.</p>
+
+  <!-- 1x1 transparent gif -->
+  <img
+    src="data:image/gif;base64,R0lGODlhAQABAPAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+    width="1"
+    height="1"
+    alt="1x1 pixel"
+  >
+
+  <!-- 0x0 transparent gif -->
+  <img
+    src="data:image/gif;base64,R0lGODlhAQABAPAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+    width="0"
+    height="0"
+    alt="0x0 pixel"
+  >
+
+  <p>Normal image for comparison:</p>
+  <img src="https://picsum.photos/id/1039/800/500" alt="Normal" loading="lazy">
+
+  <p><a href="./index.html">Back</a></p>
+</body>
+</html>

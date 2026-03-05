@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background / Pattern / Separator Filename Test</title>
+</head>
+<body>
+
+  <h1>Background / Pattern / Separator Filename Detection</h1>
+
+  <h2>✅ Should Be Marked Decorative</h2>
+
+  <img src="https://example.com/images/bg.jpg" alt="background">
+  <img src="https://example.com/images/background-hero.jpg" alt="background hero">
+  <img src="https://example.com/assets/pattern.png" alt="pattern">
+  <img src="https://example.com/assets/tile.png" alt="tile pattern">
+  <img src="https://example.com/textures/texture.jpg" alt="texture">
+  <img src="https://example.com/ui/gradient.png" alt="gradient">
+  <img src="https://example.com/ui/divider.svg" alt="divider">
+  <img src="https://example.com/ui/separator.png" alt="separator">
+  <img src="https://example.com/ui/line.png" alt="line separator">
+  <img src="https://example.com/ui/border.png" alt="border">
+  <img src="https://example.com/ui/shadow.png" alt="shadow effect">
+  <img src="https://example.com/assets/footer-divider-line.png" alt="footer divider line">
+
+  <h2>❌ Should NOT Be Marked Decorative (False Positive Traps)</h2>
+
+  <!-- Substring inside unrelated words -->
+  <img src="https://example.com/images/campaign.jpg" alt="campaign">
+  <img src="https://example.com/images/storyline.jpg" alt="storyline">
+  <img src="https://example.com/images/headline-photo.jpg" alt="headline photo">
+  <img src="https://example.com/images/border-collie.jpg" alt="border collie dog">
+  <img src="https://example.com/images/shadowing-technique.jpg" alt="shadowing technique">
+  <img src="https://example.com/images/texture-artwork.jpg" alt="texture artwork (content)">
+  <img src="https://example.com/images/product-gradient-shirt.jpg" alt="product gradient shirt">
+
+  <h2>Baseline Normal Image</h2>
+
+  <img src="https://picsum.photos/id/1200/600/400" alt="normal content image">
+
+</body>
+</html>

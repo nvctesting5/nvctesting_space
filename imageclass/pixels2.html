@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1x1 Image Dimension Test</title>
+</head>
+<body>
+
+  <h1>Images with width="1" and height="1"</h1>
+
+  <p>These images simulate tracking pixels and edge cases.</p>
+
+  <!-- Classic 1x1 tracking pixel -->
+  <img 
+    src="images/pixel1.gif"
+    width="1"
+    height="1"
+    alt="tracking pixel"
+  >
+
+  <!-- 1x1 with empty alt -->
+  <img 
+    src="images/pixel2.png"
+    width="1"
+    height="1"
+    alt=""
+  >
+
+  <!-- 1x1 with missing alt -->
+  <img 
+    src="images/missing-alt.gif"
+    width="1"
+    height="1"
+  >
+
+  <!-- 1x1 but styled larger via CSS -->
+  <img 
+    src="images/pixel1.gif"
+    width="1"
+    height="1"
+    style="width:100px; height:100px;"
+    alt="visually enlarged but attribute 1x1"
+  >
+
+  <!-- Larger image but visually shrunk to 1x1 -->
+  <img 
+    src="images/fallback-scenic.jpg"
+    width="1"
+    height="1"
+    alt="Large image rendered as 1x1"
+  >
+
+  <!-- Normal image for comparison -->
+  <img 
+    src="images/fallback-scenic.jpg"
+    width="600"
+    height="400"
+    alt="Normal sized image"
+  >
+
+</body>
+</html>

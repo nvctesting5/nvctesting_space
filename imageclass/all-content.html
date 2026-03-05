@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script defer type="application/javascript" src="https://git-feature--sa-alt-text-patch.patches.ahrefs.me/2f1d46b4-4d48-4c0c-a3cd-1e9ca362d914.js"></script>
+  <meta charset="UTF-8">
+  <title>Conflict Test – Not Decorative</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; }
+    h2 { margin-top: 40px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; margin-top: 16px; }
+    figure { margin: 0; padding: 12px; border: 1px solid #eee; border-radius: 8px; text-align: center; }
+    img { max-width: 100px; height: auto; }
+    figcaption { font-size: 12px; margin-top: 8px; color: #666; word-break: break-all; }
+  </style>
+</head>
+<body>
+
+<h1>Conflict Cases – NOT Decorative (Content Overrides UI Tokens)</h1>
+
+<!-- HERO -->
+<h2>Hero Conflict</h2>
+<div class="grid">
+  <figure><img src="/imageclass/images/conflict/hero-icon.png" alt=""><figcaption>Empty Alt</figcaption></figure>
+  <figure><img src="/imageclass/images/conflict/icon-hero-banner.svg"><figcaption>No Alt</figcaption></figure>
+  <figure><img src="/imageclass/images/conflict/hero-chevron.webp" alt="Hero section image"><figcaption>Alt</figcaption></figure>
+  <figure><img src="/imageclass/images/conflict/hero_spritesheet.png"><figcaption>No Alt</figcaption></figure>
+</div>
+
+</body>
+</html>

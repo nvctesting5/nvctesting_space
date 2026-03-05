@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Partial 1px Dimension Test</title>
+</head>
+<body>
+
+  <h1>Images with One Dimension = 1px</h1>
+
+  <p>These test cases simulate borderline tracking pixel scenarios.</p>
+
+  <!-- Width = 1, Height > 1 -->
+  <img 
+    src="images/pixel1.gif"
+    width="1"
+    height="50"
+    alt="width 1 height 50"
+  >
+
+  <!-- Width > 1, Height = 1 -->
+  <img 
+    src="images/pixel1.gif"
+    width="50"
+    height="1"
+    alt="width 50 height 1"
+  >
+
+  <!-- Width = 1, Height large -->
+  <img 
+    src="images/fallback-scenic.jpg"
+    width="1"
+    height="400"
+    alt="large image squeezed to width 1"
+  >
+
+  <!-- Height = 1, Width large -->
+  <img 
+    src="images/fallback-scenic.jpg"
+    width="600"
+    height="1"
+    alt="large image squeezed to height 1"
+  >
+
+  <!-- CSS override case -->
+  <img 
+    src="images/pixel2.png"
+    width="1"
+    height="50"
+    style="height:1px;"
+    alt="attribute height 50 but CSS height 1px"
+  >
+
+  <!-- Percentage sizing case -->
+  <img 
+    src="images/fallback-scenic.jpg"
+    width="1"
+    height="100%"
+    alt="width 1 height percentage"
+  >
+
+  <!-- Normal image for comparison -->
+  <img 
+    src="images/fallback-scenic.jpg"
+    width="600"
+    height="400"
+    alt="normal sized image"
+  >
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Size in Filename – Decorative</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; }
+    h2 { margin-top: 36px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; margin-top: 14px; }
+    figure { margin: 0; padding: 12px; border: 1px solid #eee; border-radius: 10px; text-align: center; }
+    img { max-width: 90px; height: auto; }
+    figcaption { font-size: 12px; margin-top: 8px; color: #666; word-break: break-all; }
+    .pill { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #f2f2f2; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<h1>Size in Filename – Mark Decorative</h1>
+<p>
+  Expected result: all images below should be <strong>Decorative</strong> because the filename includes a size token.
+</p>
+
+<h2>NxN tokens (16x16, 24x24, 32x32, 48x48, 64x64)</h2>
+<div class="grid">
+  <figure><img src="/imageclass/images/size/icon-16x16.png" alt="" aria-hidden="true"><figcaption>icon-16x16.png</figcaption><div class="pill">Decorative</div></figure>
+  <figure><img src="/imageclass/images/size/icon-24x24.svg" alt="" aria-hidden="true"><figcaption>icon-24x24.svg</figcaption><div class="pill">Decorative</div></figure>
+  <figure><img src="/imageclass/images/size/icon-32x32.webp" alt="" aria-hidden="true"><figcaption>icon-32x32.webp</figcaption><div class="pill">Decorative</div></figure>
+  <figure><img src="/imageclass/images/size/icon-48x48.png" alt="" aria-hidden="true"><figcaption>icon-48x48.png</figcaption><div class="pill">Decorative</div></figure>
+  <figure><img src="/imageclass/images/size/icon-64x64.svg" alt="" aria-hidden="true"><figcaption>icon-64x64.svg</figcaption><div class="pill">Decorative</div></figure>
+</div>
+
+<h2>w/h tokens (w16, h16, w24, h24, w32, h32, w48, h48, w64, h64)</h2>
+<div class="grid">
+  <figure><img src="/imageclass/images/size/icon-w16.png" alt="" aria-hidden="true"><figcaption>icon-w16.png</figcaption><div class="pill">Decorative</div></figure>
+  <figure><img src="/imageclass/images/size/icon-h16.svg" alt="" aria-hidden="true"><figcaption>icon-h16.svg</figcaption><div class="pill">Decorative</div></figure>
+
+  <figure><img src="/imageclass/images/size/icon-w24.webp" alt="" aria-hidden="true"><figcaption>icon-w24.webp</figcaption><div class="pill">Decorative</div></figure>
+  <figure><img src="/imageclass/images/size/icon-h24.png" alt="" aria-hidden="true"><figcaption>icon-h24.png</figcaption><div class="pill">Decorative</div></figure>
+
+  <figure><img src="/imageclass/images/size/icon-w32.svg" alt="" aria-hidden="true"><figcaption>icon-w32.svg</figcaption><div class="pill">Decorative</div></figure>
+  <figure><img src="/imageclass/images/size/icon-h32.webp" alt="" aria-hidden="true"><figcaption>icon-h32.webp</figcaption><div class="pill">Decorative</div></figure>
+
+  <figure><img src="/imageclass/images/size/icon-w48.png" alt="" aria-hidden="true"><figcaption>icon-w48.png</figcaption><div class="pill">Decorative</div></figure>
+  <figure><img src="/imageclass/images/size/icon-h48.svg" alt="" aria-hidden="true"><figcaption>icon-h48.svg</figcaption><div class="pill">Decorative</div></figure>
+
+  <figure><img src="/imageclass/images/size/icon-w64.webp" alt="" aria-hidden="true"><figcaption>icon-w64.webp</figcaption><div class="pill">Decorative</div></figure>
+  <figure><img src="/imageclass/images/size/icon-h64.png" alt="" aria-hidden="true"><figcaption>icon-h64.png</figcaption><div class="pill">Decorative</div></figure>
+</div>
+
+</body>
+</html>

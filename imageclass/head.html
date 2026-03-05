@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Inside Head Test</title>
+
+  <!-- Tracking pixel inside head -->
+  <img 
+    src="images/pixel1.gif"
+    width="1"
+    height="1"
+    alt="tracking pixel in head"
+  >
+
+  <!-- 0x0 pixel -->
+  <img 
+    src="images/pixel2.png"
+    width="0"
+    height="0"
+    alt=""
+  >
+
+  <!-- Larger image inside head -->
+  <img 
+    src="images/fallback-scenic.jpg"
+    alt="Large fallback image placed inside head"
+  >
+
+  <!-- Keyword stuffed alt -->
+  <img 
+    src="images/banner.jpg"
+    alt="buy cheap sale discount best price online deal"
+  >
+
+</head>
+<body>
+
+  <h1>Image Inside &lt;head&gt; Test</h1>
+
+  <p>This page intentionally contains images inside the head element.</p>
+
+  <!-- Normal body image -->
+  <img 
+    src="images/fallback-scenic.jpg"
+    alt="Normal body image for comparison"
+  >
+
+</body>
+</html>

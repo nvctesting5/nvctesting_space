@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loader/Spinner/Placeholder Filename Test</title>
+</head>
+<body>
+
+  <h1>Loader / Spinner / Placeholder Filename Detection</h1>
+
+  <h2>✅ Should Be Marked Decorative</h2>
+
+  <img src="https://nvctesting.site/imageclass/images/spinner.gif" alt="spinner">
+  <img src="https://nvctesting.site/imageclass/images/loader.svg" alt="loader">
+  <img src="https://nvctesting.site/imageclass/images/loading.png" alt="loading">
+  <img src="https://nvctesting.site/imageclass/images/placeholder.jpg" alt="placeholder">
+  <img src="https://nvctesting.site/imageclass/images/shimmer.png" alt="shimmer effect">
+  <img src="https://nvctesting.site/imageclass/images/product-loading-spinner@2x.gif" alt="product loading spinner">
+
+
+  <!-- Marked as Decorative, filename contains -->
+  <img src="https://nvctesting.site/imageclass/images/loader/loading-dock-sunrise.jpg" alt="loading dock sunrise (content image)">
+  <img src="https://nvctesting.site/imageclass/images/loader/shimmering-lake.jpg" alt="shimmering lake (content image)">
+   <img src="https://nvctesting.site/imageclass/images/loader/spinneraround.gif" alt="Spinner around (content image)">
+   <img src="https://nvctesting.site/imageclass/images/loader/preloader.gif" alt="Preloader (content image)">
+  <img src="https://nvctesting.site/imageclass/images/loader/loaderinplaceholder.svg" alt="Loader in placeholder (content image)">
+
+    <h2>❌ Should NOT Be Marked Decorative (False Positive Traps)</h2>
+   <img src="https://nvctesting.site/imageclass/images/loader/shimer.png" alt="Shimer">
+
+  <!-- Keyword appears in directory only, filename clean -->
+  <img src="https://nvctesting.site/imageclass/images/photo.jpg" alt="photo in loader directory">
+
+  <!-- Baseline normal image -->
+  <img src="https://picsum.photos/seed/picsum/200/300" alt="normal content image">
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Pattern Cases</title>
+</head>
+<body>
+  <h1>URL Pattern Cases</h1>
+  <p>These are meant to trigger URL-based tracking heuristics.</p>
+
+  <h2>Domain blacklist-style</h2>
+  <img src="https://facebook.com/tr?id=123&ev=PageView&noscript=1" alt="fb tr">
+  <img src="https://px.ads.linkedin.com/collect/?pid=999&fmt=gif" alt="linkedin collect">
+  <img src="https://bat.bing.com/action/0?ti=123&Ver=2&mid=abc" alt="bing bat">
+
+  <h2>Path keyword-style</h2>
+  <img src="https://example.com/pixel.gif" alt="/pixel">
+  <img src="https://example.com/track/open.gif" alt="/track">
+  <img src="https://example.com/collect?tid=aaa" alt="/collect + tid=">
+
+  <h2>3+ query params</h2>
+  <img src="https://example.com/image.gif?a=1&b=2&c=3" alt="3 params">
+  <img src="https://example.com/image.gif?a=1&b=2&c=3&d=4" alt="4 params">
+
+  <h2>Normal control</h2>
+  <img src="https://picsum.photos/id/1050/800/500" alt="Normal control" loading="lazy">
+
+  <p><a href="./index.html">Back</a></p>
+</body>
+</html>

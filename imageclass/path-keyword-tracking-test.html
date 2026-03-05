@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Path Keyword Tracking Test</title>
+</head>
+<body>
+
+  <h1>Tracking Path & Query Keyword Test</h1>
+
+  <!-- Path-based keywords -->
+
+  <img src="https://example.com/pixel?id=123" width="1" height="1" alt="pixel path">
+  <img src="https://example.com/track/user" width="1" height="1" alt="track path">
+  <img src="https://example.com/tracking/pageview" width="1" height="1" alt="tracking path">
+  <img src="https://example.com/collect/data" width="1" height="1" alt="collect path">
+  <img src="https://example.com/conversion/sale" width="1" height="1" alt="conversion path">
+  <img src="https://example.com/click/banner" width="1" height="1" alt="click path">
+  <img src="https://example.com/view/content" width="1" height="1" alt="view path">
+  <img src="https://example.com/visit/session" width="1" height="1" alt="visit path">
+  <img src="https://example.com/hit/endpoint" width="1" height="1" alt="hit path">
+  <img src="https://example.com/event/pageview" width="1" height="1" alt="event path">
+
+  <!-- Query parameter keywords -->
+
+  <img src="https://example.com/image.gif?tid=ABC123" width="1" height="1" alt="tid param">
+  <img src="https://example.com/image.gif?pixel_id=999" width="1" height="1" alt="pixel_id param">
+  <img src="https://example.com/image.gif?guid=550e8400-e29b-41d4-a716-446655440000" width="1" height="1" alt="guid param">
+  <img src="https://example.com/image.gif?cx=tracking123" width="1" height="1" alt="cx param">
+  <img src="https://example.com/image.gif?extid=user789" width="1" height="1" alt="extid param">
+
+  <!-- Mixed path + query -->
+
+  <img src="https://example.com/pixel/collect?tid=ABC&guid=XYZ" width="1" height="1" alt="mixed tracking">
+
+  <!-- False positive control examples -->
+
+  <img src="https://example.com/product/pixel-art-tshirt.jpg" alt="legitimate product image">
+  <img src="https://example.com/blog/how-to-track-fitness-progress.jpg" alt="blog image">
+  <img src="https://example.com/gallery/event-photo.jpg" alt="normal event photo">
+  <img src="https://picsum.photos/id/600/600/400" alt="normal content image">
+
+</body>
+</html>

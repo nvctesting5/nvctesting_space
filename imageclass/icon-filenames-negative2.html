@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filename Half-Match – Decorative Verification</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.4; }
+    h1 { margin: 0 0 10px; }
+    .note { color:#555; margin: 0 0 22px; }
+    h2 { margin-top: 36px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 14px; }
+    figure { margin: 0; padding: 12px; border: 1px solid #eee; border-radius: 10px; }
+    img { max-width: 90px; height: auto; display:block; margin: 0 auto; }
+    figcaption { font-size: 12px; margin-top: 10px; color: #666; word-break: break-all; }
+    .pill { display:inline-block; font-size: 11px; padding: 3px 10px; border-radius: 999px; background:#f2f2f2; color:#333; margin-top: 8px; }
+    .ok { background:#e6f4ea; color:#137333; }
+    .bad { background:#fce8e6; color:#c5221f; }
+    code { background:#f6f6f6; padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+
+<h1>Filename “Half Match” – Decorative Rule Verification</h1>
+<p class="note">
+  Rule: Mark <strong>Decorative</strong> if the <strong>filename contains</strong> any of:
+  <code>sprite</code>, <code>spritesheet</code>, <code>icon</code>, <code>ico</code>, <code>glyph</code>, <code>chevron</code>, <code>xmark</code>.
+</p>
+
+<!-- ========================================================= -->
+<!-- Guard cases: demonstrate substring false positives -->
+<!-- Expected: NOT decorative (but half-match would incorrectly match) -->
+<!-- ========================================================= -->
+<h2> Guard Cases (Expected: NOT Decorative, but HALF-MATCH may misclassify)</h2>
+<p class="note">
+  These filenames include the trigger as part of a larger word (e.g., <code>iconic</code>, <code>icoffee</code>).
+  If your “half match” is pure substring matching, these may be incorrectly marked Decorative.
+</p>
+
+<div class="grid">
+  <figure><img src="/imageclass/images/halfmatch/iconic-product.png" alt="Product image" ><figcaption>iconic-product.png</figcaption><div class="pill bad">Expected: Content</div></figure>
+  <figure><img src="/imageclass/images/halfmatch/icoffee-banner.png" alt="Banner image"><figcaption>icoffee-banner.png</figcaption><div class="pill bad">Expected: Content</div></figure>
+  <figure><img src="/imageclass/images/halfmatch/spritesmanship-hero.png" alt="Hero image"><figcaption>spritesmanship-hero.png</figcaption><div class="pill bad">Expected: Content</div></figure>
+  <figure><img src="/imageclass/images/halfmatch/glyphosate-infographic.png" alt="Infographic image"><figcaption>glyphosate-infographic.png</figcaption><div class="pill bad">Expected: Content</div></figure>
+  <figure><img src="/imageclass/images/halfmatch/xmarkschart.png" alt="Illustration"><figcaption>xmarkschart</figcaption><div class="pill bad">Expected: Content</div></figure>
+  <figure><img src="/imageclass/images/halfmatch/chevron-pattern-cover.png" alt="Cover image"><figcaption>chevron-pattern-cover.png</figcaption><div class="pill bad">Expected: Content</div></figure>
+
+  <figure><img src="/imageclass/images/halfmatch/spritecoke.png" alt="Half matching"><figcaption>spritecoke.png</figcaption><div class="pill bad">Expected: decorative</div></figure>
+  <figure><img src="/imageclass/images/halfmatch/spritesheet1.png" alt="Half matching"><figcaption>spritesheet1.png</figcaption><div class="pill bad">Expected: decorative/div></figure>
+  <figure><img src="/imageclass/images/halfmatch/iconic.png" alt="Half matching"><figcaption>iconnic.png</figcaption><div class="pill bad">Expected:decorative</div></figure>
+  <figure><img src="/imageclass/images/halfmatch/icoffee.png" alt="Half matching"><figcaption>icoffee.png</figcaption><div class="pill bad">Expected: decorative</div></figure>
+  <figure><img src="/imageclass/images/halfmatch/glyphosate.png" alt="Half matching"><figcaption>glyphosate.png</figcaption><div class="pill bad">Expected: decorative</div></figure>
+  <figure><img src="/imageclass/images/halfmatch/chevronn.png" alt="Half matching"><figcaption>chevronn.png</figcaption><div class="pill bad">Expected: decorative</div></figure>
+  <figure><img src="/imageclass/images/halfmatch/xmarktest.png" alt="Half matching"><figcaption>xmarktest.png</figcaption><div class="pill bad">Expected: decorative</div></figure>
+</div>
+
+</body>
+</html>

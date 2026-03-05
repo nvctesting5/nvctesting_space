@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Query Parameter Count Tracking Test</title>
+</head>
+<body>
+
+  <h1>Query Parameter Count Test</h1>
+  <p>Heuristic under test: flag image as tracking if URL has <strong>3+ query parameters</strong>.</p>
+
+  <h2>0 params (should NOT be flagged)</h2>
+  <img src="https://example.com/images/photo.jpg" alt="0 params">
+
+  <h2>1 param (should NOT be flagged)</h2>
+  <img src="https://example.com/pixel.gif?id=123" width="1" height="1" alt="1 param">
+
+  <h2>2 params (should NOT be flagged)</h2>
+  <img src="https://example.com/pixel.gif?id=123&ev=PageView" width="1" height="1" alt="2 params">
+
+  <h2>3 params (FLAG as tracking)</h2>
+  <img src="https://example.com/pixel.gif?id=123&ev=PageView&tid=ABC" width="1" height="1" alt="3 params">
+
+  <h2>4+ params (FLAG as tracking)</h2>
+  <img src="https://example.com/collect.gif?id=123&ev=View&tid=ABC&guid=XYZ" width="1" height="1" alt="4 params">
+  <img src="https://example.com/track.gif?a=1&b=2&c=3&d=4&e=5" width="1" height="1" alt="5 params">
+
+  <h2>Edge cases</h2>
+
+  <!-- Repeated param keys (still count each pair) -->
+  <img src="https://example.com/pixel.gif?id=1&id=2&id=3" width="1" height="1" alt="repeated params: 3">
+
+  <!-- Empty values (still params) -->
+  <img src="https://example.com/pixel.gif?a=&b=&c=" width="1" height="1" alt="empty values: 3">
+
+  <!-- Mixed encoding -->
+  <img src="https://example.com/pixel.gif?a=1&b=hello%20world&c=%7Bjson%7D" width="1" height="1" alt="encoded params: 3">
+
+  <!-- Fragment should NOT count as query params -->
+  <img src="https://example.com/pixel.gif?a=1&b=2#c=3" width="1" height="1" alt="2 params + fragment">
+
+  <!-- Semicolon separators sometimes appear in the wild -->
+  <img src="https://example.com/pixel.gif?a=1;b=2;c=3" width="1" height="1" alt="semicolon separated (parser-dependent)">
+
+  <!-- Baseline normal image -->
+  <img src="https://picsum.photos/id/700/600/400" alt="normal content image">
+
+</body>
+</html>

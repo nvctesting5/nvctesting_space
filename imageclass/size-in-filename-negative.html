@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Size Token False Positive Guard</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; }
+    h2 { margin-top: 40px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
+    figure { margin: 0; padding: 12px; border: 1px solid #eee; border-radius: 8px; text-align: center; }
+    img { max-width: 110px; height: auto; }
+    figcaption { font-size: 12px; margin-top: 8px; color: #666; word-break: break-all; }
+    .pill { display: inline-block; font-size: 11px; padding: 3px 8px; border-radius: 999px; background: #e6f4ea; color: #137333; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<h1>False Positive Guard – Size Token + Content Keyword</h1>
+<p>
+  These images contain size tokens but ALSO contain content keywords.
+  Expected result: <strong>NOT Decorative</strong>.
+</p>
+
+<h2>Hero + Size</h2>
+<div class="grid">
+  <figure>
+    <img src="/imageclass/images/size/icon-hero-64x64.png" alt="Hero product image">
+    <figcaption>icon-hero-64x64.png</figcaption>
+    <div class="pill">NOT decorative</div>
+  </figure>
+
+ <figure>
+    <img src="/imageclass/images/size/icon-64xx64.png" alt="Typo">
+    <figcaption>icon-hero-64xx64.png</figcaption>
+    <div class="pill">NOT decorative</div>
+  </figure>
+
+  <figure>
+    <img src="/imageclass/images/size/icon-h16w24.png" alt="Combination">
+    <figcaption>icon-h16w24.png</figcaption>
+    <div class="pill">decorative</div>
+  </figure>
+
+   <figure>
+    <img src="/imageclass/images/size/icon-16x32.png" alt="Combination">
+    <figcaption>icon-16x32.png</figcaption>
+    <div class="pill">NOT decorative</div>
+  </figure>
+
+  <figure>
+    <img src="/imageclass/images/size/icon-w16w16.png" alt="Duplicate">
+    <figcaption>icon-w16w16.png</figcaption>
+    <div class="pill">decorative</div>
+  </figure>
+
+  <figure>
+    <img src="/imageclass/images/size/icon-h48h64.png" alt="Combination">
+    <figcaption>icon-h48h64.png</figcaption>
+    <div class="pill">decorative</div>
+  </figure>
+  
+  <figure>
+    <img src="/imageclass/images/size/icon-64x64x48x48.png" alt="Combination">
+    <figcaption>icon-64x64x48x48.png</figcaption>
+    <div class="pill">decorative</div>
+  </figure>
+
+   <figure>
+    <img src="/imageclass/images/size/icon-32x3232x32.png" alt="Combination">
+    <figcaption>icon-32x3232x32.png</figcaption>
+    <div class="pill">decorative</div>
+  </figure>
+
+  <figure>
+    <img src="/imageclass/images/size/icon-h16x16.png" alt="Combination">
+    <figcaption>icon-h16x16.png</figcaption>
+    <div class="pill">decorative</div>
+  </figure>
+
+   <figure>
+    <img src="/imageclass/images/size/icon-hw2416.png" alt="Combination">
+    <figcaption>icon-hw2416.png</figcaption>
+    <div class="pill">decorative</div>
+  </figure>
+
+   <figure>
+    <img src="/imageclass/images/size/icon-h61.png" alt="Combination">
+    <figcaption>icon-h61.png</figcaption>
+    <div class="pill">NOT decorative</div>
+  </figure>
+</body>
+</html>
